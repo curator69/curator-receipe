@@ -2,9 +2,6 @@ import icons from 'url:../../img/icons.svg'; // Parcel 2
 
 export default class View {
   _data;
-  #clear() {
-    this._parentElement.innerHTML = '';
-  }
 
   /**
    * Render the received object to the DOM
@@ -24,7 +21,7 @@ export default class View {
 
     if (!render) return markup;
 
-    this.#clear();
+    this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
@@ -56,11 +53,11 @@ export default class View {
         );
     });
   }
-  /*
+
   _clear() {
     this._parentElement.innerHTML = '';
   }
-*/
+
   renderSpinner() {
     const markup = `
       <div class="spinner">
@@ -69,7 +66,7 @@ export default class View {
         </svg>
       </div>
     `;
-    this.#clear();
+    this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
@@ -84,7 +81,7 @@ export default class View {
         <p>${message}</p>
       </div>
     `;
-    this.#clear();
+    this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
@@ -99,7 +96,7 @@ export default class View {
         <p>${message}</p>
       </div>
     `;
-    this.#clear();
+    this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 }
