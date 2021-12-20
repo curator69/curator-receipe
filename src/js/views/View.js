@@ -2,7 +2,9 @@ import icons from 'url:../../img/icons.svg'; // Parcel 2
 
 export default class View {
   _data;
-  _clear;
+  _clear() {
+    this._parentElement.innerHTML = '';
+  }
 
   /**
    * Render the received object to the DOM
@@ -54,11 +56,11 @@ export default class View {
         );
     });
   }
-
+  /*
   _clear() {
     this._parentElement.innerHTML = '';
   }
-
+*/
   renderSpinner() {
     const markup = `
       <div class="spinner">
