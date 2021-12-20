@@ -2,6 +2,7 @@ import icons from 'url:../../img/icons.svg'; // Parcel 2
 
 export default class View {
   _data;
+  _clear;
 
   /**
    * Render the received object to the DOM
