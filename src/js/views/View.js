@@ -21,7 +21,7 @@ export default class View {
 
     if (!render) return markup;
 
-    //this._clear();
+    this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
@@ -53,11 +53,11 @@ export default class View {
         );
     });
   }
-  /*
+
   _clear() {
     this._parentElement.innerHTML = '';
   }
-*/
+
   renderSpinner() {
     const markup = `
       <div class="spinner">
@@ -66,7 +66,7 @@ export default class View {
         </svg>
       </div>
     `;
-    //this._clear();
+    this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
@@ -81,7 +81,7 @@ export default class View {
         <p>${message}</p>
       </div>
     `;
-    //this._clear();
+    this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
@@ -97,7 +97,7 @@ export default class View {
       </div>
     `;
 
-    //this._clear();
+    this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 }
